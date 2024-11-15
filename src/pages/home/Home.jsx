@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../home/home.scss";
 import Hero from "../../components/hero/Hero";
-import Category from "../../components/collection/collection";
+import Category from "../../components/collection/Collection";
 import axios from "axios";
 import { IoAddCircle } from "react-icons/io5";
 
