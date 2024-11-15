@@ -1,0 +1,28 @@
+.garant{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 50px 0;
+    &__title{
+        p{
+            font-size: 40px;
+            font-weight: 700;
+        }
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        b{
+            padding: 20px 0;
+        }
+        ul{
+            list-style: inside;
+            padding: 10px 0;
+        }
+    }
+}
+
+@media (max-width:700px) {
+    .garant{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

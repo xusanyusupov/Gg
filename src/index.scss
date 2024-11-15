@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Manrope", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+:root{
+    --main-text: #454545;
+    --main-hover: #272727;
+    --savedItem: #C63C3C;
+    --white: #fff;
+    --radius: 100px;
+    --transition: .2s;
+    --hero-color: #F2F2F2;
+}
+ul{
+    list-style: none;
+}
+.container{
+    max-width: 1320px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}

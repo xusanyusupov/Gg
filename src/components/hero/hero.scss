@@ -1,0 +1,138 @@
+.hero{
+    margin: 50px 0;
+    &-wrapper{
+        .carousel{
+            border-radius: 50px;
+            width: 100%;
+            height: 100%;
+            .swiper-button-next,
+            .swiper-button-prev{
+                color: var(--main-text);
+            }
+            .swiper-pagination-bullet{
+                background-color: black;
+            }
+            .swiper-pagination-bullet.swiper-pagination-bullet-active{
+                background-color: black;
+            }
+            .hero-swipper{
+                background-color: var(--hero-color);
+                padding: 20px;
+                .hero-slide{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 150px;
+                    .hero-slideText{
+                        p{
+                            font-size: 65px;
+                        }
+                        button{
+                            padding: 10px 25px ;
+                            border-radius: 50px;
+                            background-color: var(--main-text);
+                            border: 1px solid var(--main-text);
+                            color: var(--white);
+                            font-size: 18px;
+                            transition: .3s;
+                            &:hover{
+                                background-color: var(--white);
+                                color: var(--main-text);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:950px) {
+    .hero{
+        &-wrapper{
+            .carousel{
+                .hero-swipper{
+                    .hero-slide{
+                        .hero-slideText{
+                            p{
+                                font-size: 45px;
+                            }
+                        }
+                        .hero-slideImg{
+                            img{
+                                width: 400px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:800px) {
+    .hero{
+        &-wrapper{
+            .carousel{
+                .hero-swipper{
+                    padding: 50px 0;
+                    .hero-slide{
+                        display: flex;
+                        flex-direction: column-reverse;
+                        align-items: center;
+                        gap: 25px;
+                        .hero-slideText{
+                            p{
+                                font-size: 45px;
+                                text-align: center;
+                            }
+                            button{
+                                margin: 0 auto;
+                                display: block; 
+                            }
+                        }
+                        .hero-slideImg{
+                            img{
+                                width: 400px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .hero{
+        &-wrapper{
+            .carousel{
+                background-color: var(--hero-color);
+                .hero-swipper{
+                    padding: 50px 0;
+                    .hero-slide{
+                        display: flex;
+                        flex-direction: column-reverse;
+                        align-items: center;
+                        gap: 25px;
+                        .hero-slideText{
+                            p{
+                                font-size: 45px;
+                                text-align: center;
+                            }
+                            button{
+                                margin: 0 auto;
+                                display: block; 
+                            }
+                        }
+                        .hero-slideImg{
+                            img{
+                                width: 300px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
