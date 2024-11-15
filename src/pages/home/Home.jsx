@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../home/home.scss";
 import Hero from "../../components/hero/Hero";
-import Collection from "../../components/collection/Collection"
+import Category from "../../components/collection/Category.jsx"
 import axios from "axios";
 import { IoAddCircle } from "react-icons/io5";
 
@@ -28,7 +28,7 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <Collection />
+      <Category />
       <div className="container">
         <div className="card__wrapper">{productRender}</div>
       </div>
