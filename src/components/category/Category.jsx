@@ -1,5 +1,5 @@
 import React from "react";
-import "./collection.scss"
+import "../category/collection.scss"
 
 import category1 from "../../assets/category1.svg";
 import category2 from "../../assets/category2.svg";
