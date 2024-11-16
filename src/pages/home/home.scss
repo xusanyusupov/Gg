@@ -7,6 +7,8 @@
       width: 250px;
       height: 250px;
       object-fit: contain;
+      display: block;
+      margin: 0 auto;
     }
     &__title {
       display: flex;
@@ -74,19 +76,20 @@
   }
 }
 
-@media (max-width:990px) {
+
+@media (max-width: 1200px) {
     .card__wrapper{
         grid-template-columns: repeat(3,1fr);
     }
 }
 
-@media (max-width:700px) {
+@media (max-width:900px) {
     .card__wrapper{
         grid-template-columns: repeat(2,1fr);
     }
 }
 
-@media (max-width:500px) {
+@media (max-width:600px) {
     .card__wrapper{
         grid-template-columns: repeat(1,1fr);
         .card{
