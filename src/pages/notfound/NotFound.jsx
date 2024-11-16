@@ -11,7 +11,7 @@ const Notfound = () => {
         <img src={not} alt="" />
 
         <button class="not-found__btn">
-        <NavLink to={'/'}>
+        <NavLink to={'/'} className="goHome">
           Home
         </NavLink>
         </button> 
