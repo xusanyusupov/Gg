@@ -4,6 +4,7 @@ import Hero from "../../components/hero/Hero";
 import Category from "../../components/category/Category";
 import axios from "axios";
 import { IoAddCircle } from "react-icons/io5";
+import { Link, useParams } from "react-router-dom";
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -14,7 +15,9 @@ const Home = () => {
 
   const productRender = data?.map((el) => (
     <div key={el.id} className="card">
+      <Link to={`/product/${el.id}`}>
       <img src={el.image} alt="" />
+      </Link>
       <div className="card__title">
         <b>{el.title}</b>
         <div tabindex="0" className="plusButton">
@@ -24,6 +27,10 @@ const Home = () => {
       <p>{el.price}$</p>
     </div>
   ));
+
+
+  const {id} = useParams()
+  console.log(id);
 
   return (
     <>

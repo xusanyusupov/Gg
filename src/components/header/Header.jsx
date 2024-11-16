@@ -34,7 +34,7 @@ const Header = () => {
               <ul className="sub-header__collection">
                 <li>
                   <span>
-                    <NavLink  activeClassName="active" to={"/"} className="sub-header__link">
+                    <NavLink to={"/"} className="sub-header__link">
                       Home
                     </NavLink>
                   </span>

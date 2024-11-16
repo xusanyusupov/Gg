@@ -25,7 +25,7 @@ const Router = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
         {/* detail  */}
-        <Route path="/detail/:id" element={<Detail />} /> 
+        <Route path="/product/:id" element={<Detail />} /> 
         {/* detail  */}
         <Route path="*" element={<Notfound />} />
       </Route>
