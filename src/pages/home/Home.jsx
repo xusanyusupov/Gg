@@ -5,9 +5,10 @@ import Category from "../../components/category/Category";
 import axios from "axios";
 import { IoAddCircle } from "react-icons/io5";
 import { Link, useParams } from "react-router-dom";
-
 import { Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import { IoMdHeartEmpty } from "react-icons/io";
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -23,18 +24,25 @@ const Home = () => {
   };
 
   const productRender = data?.map((el) => (
-    <div key={el.id} className="card">
-      <img onClick={show} src={el.image} alt="" />
-      <div className="card__title">
-        <Link to={`/product/${el.id}`} className="title__card">
-          <b>{el.title}</b>
-        </Link>
-        <div className="plusButton">
-          <IoAddCircle className="plusIcon" />
-        </div>
-      </div>
-      <p>{el.price}$</p>
+    <div key={el.id} className="card" style={{ position: "relative" }}>
+  <img onClick={show} src={el.image} alt="" />
+  <div className="card__title">
+    <Link to={`/product/${el.id}`} className="title__card">
+      <b>{el.title}</b>
+    </Link>
+    <div className="plusButton">
+      <IoAddCircle className="plusIcon" />
     </div>
+  </div>
+  <p>{el.price}$</p>
+  <button
+    className="card__wish"
+    style={{ top: "25px", right: "25px", position: "absolute" }}
+  >
+    <IoMdHeartEmpty />
+  </button>
+</div>
+
   ));
   // const {id} = useParams()
   const [activeIndex, setActiveIndex] = useState(0);
@@ -63,7 +71,7 @@ const Home = () => {
                 className="mySwiper"
                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)} 
               >
-                {data?.map((card, index) => (
+                {data?.map((card) => (
                   <SwiperSlide key={card.id}>
                     <img src={card.image} alt={card.title} />
                   </SwiperSlide>
