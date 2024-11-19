@@ -61,20 +61,18 @@
           cursor: pointer;
         }
         .swip__btn-more{
-          background-color: var(--main-text);
+          background-color: rgb(20, 20, 110);
           color: var(--white);
-          border: 1px solid var(--main-text);
-          // transition: .3s;
+          border: 1px solid rgb(20, 20, 110);
           &:hover{
             background-color: var(--white);
-            color: var(--main-text);
+            color: rgb(20, 20, 110);
           }
         }
         .swip__btn-cancel{
           background-color: rgb(167, 25, 25);
           border: 1px solid  rgb(167, 25, 25);
           color: var(--white);
-          // transition: .3s;
           &:hover{
             background-color: var(--white);
             color:  rgb(167, 25, 25);
