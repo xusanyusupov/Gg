@@ -52,7 +52,7 @@ const Home = () => {
 
       <Category />
 
-      {showModal && (
+      {/* {showModal && (
         <div className="card__modal" onClick={show}>
           <div
             className="card__modal-items"
@@ -90,7 +90,45 @@ const Home = () => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
+      {showModal && (
+  <div className="card__modal" onClick={show}>
+    <div
+      className="card__modal-items"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <div className="card__modal-items-swip">
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={30}
+          loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        >
+          <SwiperSlide key={data[activeIndex]?.id}>
+            <img src={data[activeIndex]?.image} alt={data[activeIndex]?.title} />
+          </SwiperSlide>
+        </Swiper>
+        <div className="card__modal-items-swip-btn">
+          <button className="swip__btn-cancel" onClick={show}>
+            Cancel
+          </button>
+          {data && (
+            <Link to={`/product/${data[activeIndex]?.id}`}>
+              <button className="swip__btn-more">More</button>
+            </Link>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
       <div className="container">
         <div className="card__wrapper">{productRender}</div>
       </div>
