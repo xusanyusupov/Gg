@@ -90,7 +90,7 @@
         .detail__info-white{
             width: 40px;
             height: 40px;
-            background-color: white;
+            background-color: var(--white);
             border: 1px solid var(--main-text);
             border-radius: 8px;
             cursor: pointer;
@@ -111,11 +111,12 @@
                 background-color: var(--white);
                 font-size: 18px;
                 cursor: pointer;
+                color: var(--main-text);
             }
             .detail__info-check{
                 padding: 10px 20px;
                 border-radius: 10px;
-                background-color: black;
+                background-color: var(--main-text);
                 font-size: 18px;
                 color: var(--white);
                 border: 1px solid var(--main-text);
@@ -123,7 +124,7 @@
                 transition: .3s;
                 &:hover{
                     background-color: var(--white);
-                    color: black;
+                    color: var(--main-text);
                 }
             }
         }

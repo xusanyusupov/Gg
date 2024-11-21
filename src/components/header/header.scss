@@ -1,4 +1,10 @@
 .header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  background-color: white;
+  padding-bottom: 10px;
   .sub-header {
     display: flex;
     justify-content: space-between;

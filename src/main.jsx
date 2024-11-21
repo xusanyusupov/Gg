@@ -1,16 +1,19 @@
-// import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import './index.scss';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.scss";
+import { StateProvider } from "./context/index.jsx";
+import { reducer, initialState } from "./context/reducer.js";
 // router st
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from "react-router-dom";
 // router en
-import App from './App.jsx'
+import App from "./App.jsx";
 
-
-createRoot(document.getElementById('root')).render(
-  // <StrictMode>
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
     <BrowserRouter>
-      <App />
+      <StateProvider reducer={reducer} initialState={initialState}>
+        <App />
+      </StateProvider>
     </BrowserRouter>
-  // </StrictMode>,
-)
+  </StrictMode>
+);

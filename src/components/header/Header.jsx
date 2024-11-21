@@ -113,7 +113,7 @@ const Header = () => {
                   <IoHomeSharp className="icon" />
                   <span>Home</span>
                 </Link>
-                <Link to={'/'} className="navbar__action__link">
+                <Link to={'/wishlist'} className="navbar__action__link">
                   <FaRegHeart className="icon" />
                   <span>Liked</span>
                 </Link>

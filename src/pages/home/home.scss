@@ -61,21 +61,21 @@
           cursor: pointer;
         }
         .swip__btn-more{
-          background-color: rgb(20, 20, 110);
+          background-color: var(--main-text);
           color: var(--white);
-          border: 1px solid rgb(20, 20, 110);
+          border: 1px solid var(--main-text);
           &:hover{
             background-color: var(--white);
-            color: rgb(20, 20, 110);
+            color: var(--main-text);
           }
         }
         .swip__btn-cancel{
-          background-color: rgb(167, 25, 25);
-          border: 1px solid  rgb(167, 25, 25);
-          color: var(--white);
+          background-color: var(--white);
+          border: 1px solid  var(--main-text);
+          color: var(--main-text);
           &:hover{
             background-color: var(--white);
-            color:  rgb(167, 25, 25);
+            color:  var(--main-text);
           }
         }
       }

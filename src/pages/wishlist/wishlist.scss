@@ -1,0 +1,19 @@
+.wishlist{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 150px 0;
+    button{
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        img{
+            width: 50%;
+        }
+    }
+    b{
+        font-size: 25px;
+        margin: 50px 0;
+    }
+}

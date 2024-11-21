@@ -12,6 +12,7 @@ import Layout from "../pages/layout/Layout";
 import Payment from "../pages/payment/Payment";
 import Detail from "../pages/detail/Detail";
 import Notfound from "../pages/notfound/NotFound";
+import Wishlist from "../pages/wishlist/Wishlist";
 
 const Router = () => {
   return (
@@ -27,6 +28,7 @@ const Router = () => {
         {/* detail  */}
         <Route path="/product/:id" element={<Detail />} /> 
         {/* detail  */}
+        <Route path="wishlist" element={<Wishlist/>}/>
         <Route path="*" element={<Notfound />} />
       </Route>
     </Routes>
