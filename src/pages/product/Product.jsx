@@ -10,7 +10,6 @@ import { IoMdHeart } from "react-icons/io";
 
 const Product = ({ data }) => {
     const [state,dispatch] = useStateValue()
-    // console.log(state.wishlist);
 
   const [showModal, setShowModal] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);

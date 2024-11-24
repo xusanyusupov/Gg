@@ -8,7 +8,6 @@ import "../wishlist/wishlist.scss"
 
 const Wishlist = () => {
   const [state, dispatch] = useStateValue();
-  console.log(state);
 
   return (
     <>

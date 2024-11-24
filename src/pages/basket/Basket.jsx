@@ -6,7 +6,6 @@ import { NavLink } from "react-router-dom";
 
 const Basket = () => {
   const [state, dispatch] = useStateValue();
-  console.log(state);
 
   const renderCart = state?.cart?.map((item) => (
     <div key={item.id} className="cart">
