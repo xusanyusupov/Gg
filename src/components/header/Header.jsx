@@ -121,7 +121,7 @@ const Header = () => {
                   <FiBarChart2 className="icon" />
                   <span>Comparison</span>
                 </Link>
-                <Link to={'/'} className="navbar__action__link">
+                <Link to={'/basket'} className="navbar__action__link">
                   <FaCartShopping className="icon" />
                   <span>Basket</span>
                 </Link>

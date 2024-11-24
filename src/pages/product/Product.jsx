@@ -65,7 +65,7 @@ const Product = ({ data }) => {
               <Link to={`/product/${el.id}`} className="title__card">
                 <b>{el.title}</b>
               </Link>
-              <div className="plusButton">
+              <div onClick={()=> dispatch({type:"ADD_CART",payload:el})} className="plusButton">
                 <IoAddCircle className="plusIcon" />
               </div>
             </div>

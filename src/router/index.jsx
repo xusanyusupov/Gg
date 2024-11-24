@@ -13,6 +13,7 @@ import Payment from "../pages/payment/Payment";
 import Detail from "../pages/detail/Detail";
 import Notfound from "../pages/notfound/NotFound";
 import Wishlist from "../pages/wishlist/Wishlist";
+import Basket from "../pages/basket/Basket";
 
 const Router = () => {
   return (
@@ -29,6 +30,7 @@ const Router = () => {
         <Route path="/product/:id" element={<Detail />} /> 
         {/* detail  */}
         <Route path="wishlist" element={<Wishlist/>}/>
+        <Route path="basket" element={<Basket/>}/>
         <Route path="*" element={<Notfound />} />
       </Route>
     </Routes>
