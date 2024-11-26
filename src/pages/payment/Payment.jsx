@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../payment/payment.scss"
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 const Payment = () => {
+  const localtions = useLocation()
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[localtions])
+
   return (
     <div className="container">
       <div className='payment'>

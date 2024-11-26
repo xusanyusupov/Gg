@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../basket/basket.scss";
 import { useStateValue } from "../../context";
 import { MdOutlineRemoveShoppingCart } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Basket = () => {
   const [state, dispatch] = useStateValue();
+  const localtions = useLocation()
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[localtions])
+
+
 
   const renderCart = state?.cart?.map((item) => (
     <div key={item.id} className="cart">

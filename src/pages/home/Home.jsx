@@ -4,11 +4,14 @@ import Hero from "../../components/hero/Hero";
 import Category from "../../components/category/Category";
 import Product from "../product/Product";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 
 const Home = () => {
-  useEffect(() => {
+  const localtions = useLocation()
+  useEffect(()=>{
     window.scrollTo(0,0)
-  },[])
+  },[localtions])
+
   const [data, setData] = useState(null);
   useEffect(() => {
     const baseURL = "https://6734698fa042ab85d11a0bf2.mockapi.io/products";

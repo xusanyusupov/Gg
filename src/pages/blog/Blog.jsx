@@ -1,5 +1,5 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import "../blog/blog.scss"
 import blog1 from "../../assets/home1.svg"
 import blog2 from "../../assets/home2.svg"
@@ -8,6 +8,11 @@ import blog3 from "../../assets/home3.svg"
 import { LuArrowUpRight } from "react-icons/lu";
 
 const Blog = () => {
+  const localtions = useLocation()
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[localtions])
+
   return (
     <div className="container">
       <div className="blog__title">

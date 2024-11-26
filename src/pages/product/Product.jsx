@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoAddCircle } from "react-icons/io5";
 import { IoMdHeartEmpty } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {useStateValue} from "../../context/index"
@@ -18,6 +18,12 @@ const Product = ({ data }) => {
     setActiveIndex(0); 
     setShowModal(!showModal);
   };
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
 
   return (
     <>

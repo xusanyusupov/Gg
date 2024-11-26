@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 import { useAxios } from '../../hook/useAxios'
 import "../detail/detail.scss"
 import { IoStar } from "react-icons/io5";
@@ -11,9 +11,11 @@ const Detail = () => {
   const {id} = useParams()
   const {data,err} = useAxios(`${id}`)
   
-  useEffect(() => {
+  const localtions = useLocation()
+  useEffect(()=>{
     window.scrollTo(0,0)
-  },[])
+  },[localtions])
+
   return (
     <>
       <div className="container">

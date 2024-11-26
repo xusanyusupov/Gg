@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../about/about.scss";
 import { HiOutlineArrowNarrowLeft, HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 import brand1 from "../../assets/brand1.svg";
 import brand2 from "../../assets/brand2.svg";
 import brand3 from "../../assets/brand3.svg";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const About = () => {
+  const localtions = useLocation()
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[localtions])
+
   return (
     <>
       <div className="container">
