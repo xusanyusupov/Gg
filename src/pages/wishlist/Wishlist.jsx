@@ -3,18 +3,15 @@ import { useStateValue } from "../../context/index";
 import Product from "../product/Product";
 import "../home/home.scss";
 import noLike from "../../assets/nolike.svg";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "../wishlist/wishlist.scss";
-
-const location = useLocation();
-
-useEffect(() => {
-  window.scrollTo(0, 0);
-}, [location]);
-
 
 const Wishlist = () => {
   const [state, dispatch] = useStateValue();
+  const localtions = useLocation()
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[localtions])
 
   return (
     <>
