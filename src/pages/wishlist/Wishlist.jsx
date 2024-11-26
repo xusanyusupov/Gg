@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useStateValue } from "../../context/index";
 import Product from "../product/Product";
 import "../home/home.scss";
 import noLike from "../../assets/nolike.svg";
 import { NavLink } from "react-router-dom";
-import "../wishlist/wishlist.scss"
+import "../wishlist/wishlist.scss";
 
+const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+};
 const Wishlist = () => {
   const [state, dispatch] = useStateValue();
 

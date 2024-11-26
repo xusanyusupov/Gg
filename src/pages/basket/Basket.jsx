@@ -43,9 +43,8 @@ const Basket = () => {
   return (
     <>
       <div className="container">
-        {/* <p className="basket__page">Shopping Page</p> */}
        {
-        state.cart.length ?
+        state?.cart?.length ?
         <div className="basket__wrapper">
         <div className="basket">{renderCart}</div>
         <div className="user__info">

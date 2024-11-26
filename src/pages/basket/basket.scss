@@ -124,9 +124,10 @@
     flex-direction: column;
     align-items: center;
     button {
-      font-size: 50px;
+      font-size: 90px;
       background: transparent;
       border: 0;
+      cursor: pointer;
       .basket__home {
         color: var(--main-text);
       }
