@@ -2,15 +2,18 @@ import React, { useEffect } from 'react'
 import { useLocation, useParams } from 'react-router-dom'
 import { useAxios } from '../../hook/useAxios'
 import "../detail/detail.scss"
-import { IoStar } from "react-icons/io5";
-import { IoAddCircle } from "react-icons/io5";
-import { AiOutlineShopping } from "react-icons/ai";
+import { IoHeartSharp, IoStar } from "react-icons/io5";
+import { useStateValue } from '../../context';
+
+
 
 const Detail = () => {
 
   const {id} = useParams()
   const {data,err} = useAxios(`${id}`)
-  
+  const [state,dispatch] = useStateValue()
+  // console.log(state.cart);
+
   const localtions = useLocation()
   useEffect(()=>{
     window.scrollTo(0,0)
@@ -45,7 +48,7 @@ const Detail = () => {
               <div className='detail__info-bisque'></div>
               <div className='detail__info-white'></div>
             </div>
-            <div className='detail__info-btn'><button className='detail__info-add'>Add To Card  </button> <button className='detail__info-check'>Checkout Now  </button></div>
+            <div className='detail__info-btn'><button  className='detail__info-check'>Checkout Now  </button> </div>
           </div>
         </div>
       </div>

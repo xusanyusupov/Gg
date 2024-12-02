@@ -52,7 +52,7 @@ const Basket = () => {
        {
         state?.cart?.length ?
         <div className="basket__wrapper">
-        <div className="basket">{renderCart}</div>
+        <div className="basket" >{renderCart}</div>
         <div className="user__info">
           <form action="">
             <span className="user__in">User name</span>

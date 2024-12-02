@@ -54,7 +54,6 @@
             .dt__star{
                 transition: .1s;
                 &:hover{
-                    color: yellow;
                     cursor: pointer;
                 }
             }
@@ -102,18 +101,10 @@
         }
         &-btn{
             display: flex;
-            align-items: center;
+            align-items: stretch;
             gap: 20px;
-            .detail__info-add{
-                padding: 10px 20px;
-                border-radius: 10px;
-                border: 1px solid var(--main-text);
-                background-color: var(--white);
-                font-size: 18px;
-                cursor: pointer;
-                color: var(--main-text);
-            }
             .detail__info-check{
+                width: 50%;
                 padding: 10px 20px;
                 border-radius: 10px;
                 background-color: var(--main-text);
@@ -127,6 +118,7 @@
                     color: var(--main-text);
                 }
             }
+
         }
     }
 }
