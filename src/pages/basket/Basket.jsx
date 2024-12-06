@@ -3,6 +3,8 @@ import "../basket/basket.scss";
 import { useStateValue } from "../../context";
 import { MdOutlineRemoveShoppingCart } from "react-icons/md";
 import { NavLink, useLocation } from "react-router-dom";
+import { MdDeleteSweep } from "react-icons/md";
+import { GoCloud } from "react-icons/go";
 
 const Basket = () => {
   const [state, dispatch] = useStateValue();
@@ -80,6 +82,9 @@ const Basket = () => {
             </select>
             <button>Send</button>
           </form>
+          <button onClick={() => {state.cart.forEach((item) => {dispatch({ type: "REMOVE__CART", payload: item })})}}className="delete__all">  All delete
+          <MdDeleteSweep className="delete__cart"/></button>
+
         </div>
         </div>
       :

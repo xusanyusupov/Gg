@@ -5,9 +5,14 @@ import { Link, useLocation } from "react-router-dom";
 import { Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useStateValue } from "../../context/index";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { IoMdBookmark } from "react-icons/io";
+import { MdBookmark, MdBookmarkBorder, MdBookmarkRemove } from "react-icons/md";
 
 const Product = ({ data }) => {
-  const [{ wishlist }, dispatch] = useStateValue(); // `wishlist`ni to'g'ridan-to'g'ri olib kelish
+  const [{ wishlist }, dispatch] = useStateValue(); 
+  const [state] = useStateValue(); 
   const [showModal, setShowModal] = useState(false);
   const [activeProduct, setActiveProduct] = useState(null);
 
@@ -23,7 +28,7 @@ const Product = ({ data }) => {
   }, [location]);
 
   return (
-    <>
+    <>          
       {showModal && activeProduct && (
         <div className="card__modal" onClick={closeModal}>
           <div className="card__modal-items" onClick={(e) => e.stopPropagation()}>
@@ -61,7 +66,7 @@ const Product = ({ data }) => {
               <Link to={`/product/${el.id}`} className="title__card">
                 <b>{el.title}</b>
               </Link>
-              <div onClick={() => dispatch({ type: "ADD_CART", payload: el })} className="plusButton"><IoAddCircle className="plusIcon" /></div>
+              <button onClick={() => {dispatch({ type: "ADD_CART", payload: el });toast.success(`"${el?.title}" savatga qo'shildi!`);}}className="plusButton"><MdBookmark    className="plusIcon" /></button>
             </div>
             <p>{el.price}$</p>
             <button
@@ -71,21 +76,17 @@ const Product = ({ data }) => {
               className="card__wish"
               style={{ top: "25px", right: "0px", position: "absolute" }}
             >
-              {wishlist.some((i) => i.id === el.id) ? (
-                <IoMdHeart style={{ fontSize: "28px" }} />
-              ) : (
-                <IoMdHeartEmpty
-                  style={{ color: "var(--main-text)", fontSize: "28px" }}
-                />
-              )}
-            </button>
+              {wishlist.some((i) => i.id === el.id) ? (<IoMdHeart style={{ fontSize: "28px" }} />) : (<IoMdHeartEmpty style={{ color: "var(--main-text)", fontSize: "28px" }}/>)}</button>
           </div>
         ))
       ) : (
         <p style={{ textAlign: "center" }}>No products </p>
       )}
+      <ToastContainer theme="dark"/>
     </>
   );
 };
 
 export default Product;
+
+ 
