@@ -255,6 +255,7 @@
 }
 @media (max-width: 450px) {
   .header {
+
     .navbar {
       &__logo {
         img {
@@ -275,5 +276,9 @@
         }
       }
     }
+  }
+  .Btn{
+    bottom: 60px;
+    right: 20px;
   }
 }
